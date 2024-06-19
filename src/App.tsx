@@ -6,15 +6,15 @@ import { Todo } from './Components/todo.model';
 const App:React.FC = () => {
   const [todo, setTodo] = useState<string>('')
   const [todos, setTodos] = useState<Todo[]>([])
- console.log(todo)
+  console.log(todo)
  const handleAddNewItem = (e:React.FormEvent)=> {
   e.preventDefault()
   if(todo) {
-    setTodos([...todos,{id: Date.now(), todo:todo, isDone:false}])
+    setTodos ([...todos, {id: Date.now(), todo:todo, isDone:false} ])
     setTodo("")
   }
 }
-
+console.log(todos)
   return (
     <div className="app">
       <span className="heading">taskify</span>
